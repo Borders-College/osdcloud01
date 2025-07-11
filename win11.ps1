@@ -120,7 +120,8 @@ if (Test-DISMFromOSDCloudUSB -eq $true){
 }
 #>
 #Enable HPIA | Update HP BIOS | Update HP TPM
- 
+
+<#
 if (Test-HPIASupport){
     Write-SectionHeader -Message "Detected HP Device, Enabling HPIA, HP BIOS and HP TPM Updates"
     #$Global:MyOSDCloud.DevMode = [bool]$True
@@ -145,7 +146,7 @@ if ($Manufacturer -match "Lenovo") {
     }
     
 }
-
+#>
 
 #write variables to console
 Write-SectionHeader "OSDCloud Variables"
