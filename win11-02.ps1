@@ -17,36 +17,36 @@ $Global:MyOSDCloud = [ordered]@{
     ShutdownSetupComplete = [bool]$false
     SyncMSUpCatDriverUSB = [bool]$true
     CheckSHA1 = [bool]$true
-    HPIADrivers = [bool]$true
+ #   HPIADrivers = [bool]$true
 }
 
 #Invoke-OSDCloud lets you set up OSDCloud to accept lots of other variables and do lots of other config - it's going to pick up the HPIADrivers variable and use this to kick off installaing HPIA
 
-Invoke-OSDCloud
+#Invoke-OSDCloud
 
 #Test-HPIASupport will get the device model info and make sure it is  supported by HPIA
 
-Test-HPIASupport
+#Test-HPIASupport
 
 #his function installs the HP CMSL PS module from the PowerShell Gallery if not already installed.
 
-Install-ModuleHPCMSL
+#Install-ModuleHPCMSL
 
 #Back in the main script, lets create a Json file with the actions needing to be performed during the SetupComplete phase.
 
-Invoke-OSDCloud – HP.JSON
+#Invoke-OSDCloud – HP.JSON
 
 #This function Adds the necessary lines of PowerShell code to the SetupComplete.ps1 file to run the different HP Functions options.
 
-Set-SetupCompleteHPAppend
+#Set-SetupCompleteHPAppend
 
 #This function runs HPIA during the SetupComplete phase that was setup by the Set-SetupCompleteHPAppend function
 
-Invoke-HPIA
+#Invoke-HPIA
 
 #Install the latest HPIA tool to the default path “$env:ProgramFiles\HP\HPIA\bin”
 
-Install-HPIA
+#Install-HPIA
 
 #Launch OSDCloud
 Write-Host "Starting OSDCloud" -ForegroundColor Green
