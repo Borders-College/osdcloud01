@@ -17,7 +17,13 @@ $Global:MyOSDCloud = [ordered]@{
     ShutdownSetupComplete = [bool]$false
     SyncMSUpCatDriverUSB = [bool]$true
     CheckSHA1 = [bool]$true
- #   HPIADrivers = [bool]$true
+#    HPIADrivers = $true
+#    HPIAFirmware = $true
+#    HPIASoftware = $null
+#    HPTPMUpdate = $true
+#    HPBIOSUpdate = $true
+#    HPCMSLDriverPackLatest = $null
+#    HPCMSLDriverPackLatestFound = $null
 }
 
 #Invoke-OSDCloud lets you set up OSDCloud to accept lots of other variables and do lots of other config - it's going to pick up the HPIADrivers variable and use this to kick off installaing HPIA
