@@ -18,10 +18,10 @@ $Global:MyOSDCloud = [ordered]@{
     SyncMSUpCatDriverUSB = [bool]$true
     CheckSHA1 = [bool]$true
     HPIADrivers = $true
-    HPIAFirmware = $true
+#    HPIAFirmware = $null
 #    HPIASoftware = $null
-    HPTPMUpdate = $true
-    HPBIOSUpdate = $true
+#    HPTPMUpdate = $null
+#    HPBIOSUpdate = $null
 #    HPCMSLDriverPackLatest = $null
 #    HPCMSLDriverPackLatestFound = $null
 }
